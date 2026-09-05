@@ -28,6 +28,17 @@
  *
  * Time Complexity: O(n) average
  * Space Complexity: O(n)
+ * 
+ * 
+ *  Two-Pointer Technique -----------
+ *  
+ *  Time Complexity: O(n × log(n))
+ *  Space Complexity: O(1)
+ *  
+ *  Naive Approach (Brute Force) ----------
+ *  
+ *  Time Complexity: O(n2)
+ *  Space Complexity: O(1)
  *
  * --------------------------------------------------
  * Key Concept:
@@ -63,8 +74,33 @@ namespace DSA.Arrays
 
             //return false;
 
-            
+
             // --------------------------------------------------------------------------------------------------------------'
+
+            // Two Pointer Approach
+
+            //Array.Sort(arr);
+
+            //int left = 0, right = arr.Length - 1;
+
+            //while (left < right)
+            //{
+            //    int sum = arr[left] + arr[right];
+
+            //    if (sum == target)
+            //        return true;
+            //    else if (sum < target)
+
+            //        left++;
+            //    else
+
+            //        right--;
+            //}
+            //return false;
+
+
+            // --------------------------------------------------------------------------------------------------------------'
+
 
             // Optimized Approach
 
