@@ -1,4 +1,44 @@
-﻿using System.Timers;
+﻿/*
+ * Problem: Two Sum - Pair with Given Sum
+ *
+ * Given an array of integers and a target value,
+ * determine whether there exists a pair whose sum equals the target.
+ *
+ * Example:
+ * Input:  arr = [0, -1, 2, -3, 1], target = -2
+ * Output: true
+ *
+ * --------------------------------------------------
+ * Approach: HashSet
+ * --------------------------------------------------
+ *
+ * For every number `num`, we need another number:
+ *
+ *     required = target - num
+ *
+ * We maintain a HashSet containing numbers we have
+ * already seen.
+ *
+ * If `required` exists in the HashSet, we found a pair.
+ * Otherwise, add the current number to the HashSet.
+ *
+ * Why HashSet?
+ * HashSet provides O(1) average-time lookup, allowing
+ * us to solve the problem in a single pass.
+ *
+ * Time Complexity: O(n) average
+ * Space Complexity: O(n)
+ *
+ * --------------------------------------------------
+ * Key Concept:
+ * Hashing / HashSet
+ *
+ * Important C# Concept:
+ * HashSet<T> is useful when we need fast existence checks
+ * and do not need to store an associated value.
+ */
+
+using System.Timers;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DSA.Arrays
@@ -45,49 +85,3 @@ namespace DSA.Arrays
 
 }
 
-
-//| Approach    |  Time | Space |
-
-//| Brute force | O(n²) | O(1) |
-//| HashSet     | O(n) average | O(n) |
-
-//This is the classic time - space tradeoff:
-
-//We use extra memory to reduce the running time.
-
-
-//⚡ Why HashSet and not Dictionary?
-
-//Good distinction to remember.
-
-//HashSet
-
-//Use when you only care about:
-
-//Does this value exist?
-
-//HashSet<int> seen = new();
-//Dictionary
-
-//Use when you care about:
-
-//Value → associated information
-
-//For example:
-
-//Dictionary<int, int> frequencies = new();
-
-//where:
-
-//number → frequency
-
-//or:
-
-//number → index
-
-//In the current problem we only need existence.
-
-//Therefore:
-
-//HashSet<int> ✅
-//Dictionary<int, int> unnecessary
