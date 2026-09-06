@@ -1,6 +1,5 @@
 ﻿using DSA.Arrays;
 
-
 int[] arr = [1, -2, 1, 0, 5];
 int target = 0;
 
@@ -53,3 +52,12 @@ int[] arr8 = [1, 1, 2, 3, 4];
 List<int> result4 = solution10.FindUnion(arr7,arr8);
 Console.WriteLine(string.Join(", ", result4));
 
+
+Missing_number solution11 = new();
+int[] arr9 = [3, 0, 1];
+Console.WriteLine(solution11.FindMissingOptimal(arr9));
+
+
+Longest_subarray_with_given_sum solution12 = new();
+Console.WriteLine(solution12.FindLongest(
+    new[] { 1, -1, 5, -2, 3 }, 3)); // 4
