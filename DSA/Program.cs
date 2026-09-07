@@ -78,4 +78,14 @@ Console.WriteLine($"Sort_0_1_2 - Result: {string.Join(", ", result5)}");
 
 Majority_element solution15 = new();
 int[] arr12 = [4, 1, 2, 1, 2];
-Console.WriteLine($"Majority element - Result: {solution15.MajorityElement(arr12)}");
+Console.WriteLine($"Majority element - Result: {solution15.MajorityElement(arr12)}"); // 2 
+
+
+Kadane_s_algorithm solution16 = new();
+int[] arr13 = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+Console.WriteLine($"Maximum Subarray Sum  - Result: {solution16.MaxSubArray(arr13)}"); // 6
+
+
+Number_of_subarray_sum_equal_k solution17 = new();
+int[] arr14 = [3, 4, 7, 2, -3, 1, 4, 2];
+Console.WriteLine($"Number_of_subarray_sum_equal_k  - Result: {solution17.SubarraySum(arr14,7)}"); // 4
